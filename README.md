@@ -1,3 +1,2 @@
 # Pong-AI
-AI program to play classic game pong.
-Decided to try it after finishing pong game.
+AI program to play classic game pong. Works by going to the ycor of the ball. Impossible to defeat.
