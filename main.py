@@ -16,7 +16,29 @@ is_after_collision = False
 p_paddle = Paddle((350, 0))
 ball = Ball()
 sb = Scoreboard()
-ai_paddle = EnemyAI((-350, 0))
+
+is_input_ready = False
+while is_input_ready == False:
+    level = input("Input E for Easy, M for Medium, H for Hard, and I for Impossible")
+    if level == "E":
+        ai_paddle = EnemyAI((-350, 0), "Easy")
+        is_input_ready = True
+
+    elif level == "M":
+        ai_paddle = EnemyAI((-350, 0), "Medium")
+        is_input_ready = True
+
+    elif level == "H":
+        ai_paddle = EnemyAI((-350, 0), "Hard")
+        is_input_ready = True
+
+    elif level == "I":
+        ai_paddle = EnemyAI((-350, 0), "Impossible")
+        is_input_ready = True
+
+    else:
+        print("Please input E, M, H, or I")
+        is_input_ready = False
 
 def go_up():
     new_y = p_paddle.ycor() + 20
